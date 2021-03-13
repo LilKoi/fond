@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Child;
 use Illuminate\Database\Seeder;
-use App\Models\Сhildren;
 class ChildrenSeeder extends Seeder
 {
     /**
@@ -13,6 +13,6 @@ class ChildrenSeeder extends Seeder
      */
     public function run()
     {
-        Сhildren::factory()->count(50)->create();
+        Child::factory()->count(50)->create();
     }
 }

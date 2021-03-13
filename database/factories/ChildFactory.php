@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Children;
+use App\Models\Child;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ChildrenFactory extends Factory
+class ChildFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Children::class;
+    protected $model = Child::class;
 
     /**
      * Define the model's default state.
@@ -25,7 +25,8 @@ class ChildrenFactory extends Factory
         return [
             'name' => $faker->name(),
             'description' => $faker->text(),
-            'sum' =>$faker->randomFloat()
+            'sum' =>$faker->randomFloat(),
+            'header_photo' => 0
         ];
     }
 }
