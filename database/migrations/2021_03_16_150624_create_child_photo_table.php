@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChildrenTable extends Migration
+class CreateChildPhotoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateChildrenTable extends Migration
      */
     public function up()
     {
-        Schema::create('children', function (Blueprint $table) {
+        Schema::create('child_photo', function (Blueprint $table) {
             $table->id();
-            $table->text("name");
-            $table->text("description");
-            $table->double("sum");
-            // $table->integer('header_photo');
+            $table->string('name');
+            $table->integer('child_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateChildrenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('children');
+        Schema::dropIfExists('child_photo');
     }
 }

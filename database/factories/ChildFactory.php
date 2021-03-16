@@ -26,7 +26,8 @@ class ChildFactory extends Factory
             'name' => $faker->name(),
             'description' => $faker->text(),
             'sum' =>$faker->randomFloat(),
-            'header_photo' => 0
+            // 'header_photo' => 0,
+            'status' => $faker->randomNumber()
         ];
     }
 }
