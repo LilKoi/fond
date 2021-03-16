@@ -5,11 +5,16 @@ use App\Models\ChildStatus;
 
 Class ChildrenStatusRepository
 {
-    protected $childStatus;
+    protected $model;
 
     public function __construct(ChildStatus $childStatus)
     {
-        $this->childStatus = $childStatus;
+        $this->model = $childStatus;
+    }
+
+    public function statusGet()
+    {
+        return $this->model->get();
     }
 
     public function statusStore(array $store)

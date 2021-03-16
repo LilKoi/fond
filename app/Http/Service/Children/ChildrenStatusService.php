@@ -11,6 +11,11 @@ class ChildrenStatusService
         $this->rep = $childrenStatusRepository;
     }
 
+    public function statusGet()
+    {
+        return $this->rep->statusGet();
+    }
+
     public function statusStore(array $store)
     {
         return $this->rep->statusStore($store);

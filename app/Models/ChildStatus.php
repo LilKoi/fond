@@ -8,7 +8,7 @@ Class ChildStatus extends Model
 {
     protected $table = 'status_children';
 
-    protected $fillable = 'name';
+    protected $fillable = ['name'];
     
-    // protected $timestamps = false;
+    // public $timestamps = false;
 }
