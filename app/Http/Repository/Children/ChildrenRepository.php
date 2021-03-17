@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Repository;
+namespace App\Http\Repository\Children;
 
 use App\Models\Child;
 use Illuminate\Support\Collection;

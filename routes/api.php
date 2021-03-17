@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('children', 'СhildrenController');
+Route::resource('children', 'Children\СhildrenController');
 Route::resource('children-status','Children\ChildStatusController');
 // Route::group(["admin"],function(){
     //     Route::get("");
