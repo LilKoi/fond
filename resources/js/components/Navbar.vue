@@ -37,6 +37,7 @@
         <v-dialog>  
             <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" class="white--text" color="pink" @click="showBanner = !showBanner">
+                <v-icon left>phone</v-icon>
                 <span>Перезвони нам</span>
             </v-btn>
       </template>

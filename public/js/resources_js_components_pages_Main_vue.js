@@ -2574,7 +2574,7 @@ var render = function() {
         "v-card-text",
         { staticClass: "d-flex flex-column align-center" },
         [
-          _c("v-img", { attrs: { src: _vm.photo } }),
+          _c("v-img", { attrs: { src: _vm.photo.name } }),
           _vm._v(" "),
           _c("div", { staticClass: "text-center" }, [
             _vm._v(_vm._s(_vm.description))

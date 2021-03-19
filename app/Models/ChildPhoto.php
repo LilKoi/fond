@@ -11,4 +11,9 @@ Class ChildPhoto extends Model
     protected $fillable = ['name'];
 
     protected $table = 'child_photo';
+
+    public function getNameAttribute(){
+        return env('APP_URL') . '/public/storage/' . $this->attributes['name'];
+        }
+
 }
