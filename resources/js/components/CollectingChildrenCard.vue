@@ -4,7 +4,7 @@
               {{ name }}
             </v-card-title>
             <v-card-text class="d-flex flex-column align-center">
-              <v-img :src="photo.name" />
+              <v-img :src="photo" />
               <div class="text-center">{{ description }}</div>
               <v-progress-linear v-if="saved" class="mt-4" color="light-blue" height="20" value="100" striped>{{ sum }} руб.</v-progress-linear>
               <v-progress-linear v-if="!saved" class="mt-4" color="pink" height="20" value="20" striped>{{ sum }} руб.</v-progress-linear>

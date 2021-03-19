@@ -1,6 +1,6 @@
 <template>
   <v-container>
-      <v-layout class="mt-8" row justify-center>
+      <v-layout class="mt-12" row justify-center>
         <v-card elevation="4" class="d-flex flex-column justify-center flex-grow-0">
           <v-card-text class="pa-8 pb-6 d-flex flex-column justify-center">
             <span class="text-h5 text-md-h3 font-weight-light black--text text-no-wrap text-center">Ваша посильная помощь - <br> еще одна успешная операция</span>

@@ -29,6 +29,7 @@ export default {
         let json = await res.json()
         this.savedChildren = json.help
         console.log(this.savedChildren)
+        window.saved = this.savedChildren 
       }
     },
     mounted() {

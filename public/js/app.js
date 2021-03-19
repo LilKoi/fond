@@ -1942,8 +1942,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -20246,14 +20244,14 @@ var render = function() {
         "v-app-bar",
         { attrs: { height: "90", app: "" } },
         [
-          _c("v-img", {
-            staticClass: "mx-4 hidden-sm-and-down",
-            attrs: { "max-width": "90", src: "logo.png" }
-          }),
+          _c("v-img", { attrs: { "max-width": "90", src: "logo.png" } }),
           _vm._v(" "),
           _c(
             "span",
-            { staticClass: "font-weight-regular text-uppercase text-h6" },
+            {
+              staticClass:
+                "font-weight-regular text-uppercase text-h6 mx-4 hidden-sm-and-down"
+            },
             [_vm._v("\n            Фонд Провидение\n          ")]
           ),
           _vm._v(" "),

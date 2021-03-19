@@ -63,8 +63,8 @@ export default {
   left: 0;
   right: 0;
   z-index: -1;
-  background-size: 40%;
-  background-position: 0% 30%;
+  background-size: 25%;
+  background-position: -8% 20%;
   background-repeat: no-repeat;
   opacity: .9;
 }

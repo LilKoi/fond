@@ -1,13 +1,11 @@
 <template>
   <div>
       <v-app-bar height="90" app>
-        <v-img class="mx-4 hidden-sm-and-down" max-width="90" src="logo.png" />
+        <v-img max-width="90" src="logo.png" />
 
-      <!-- <v-app-bar-title shrink-on-scroll> -->
-          <span class="font-weight-regular text-uppercase text-h6">
+          <span class="font-weight-regular text-uppercase text-h6 mx-4 hidden-sm-and-down">
               Фонд Провидение
             </span>
-      <!-- </v-app-bar-title> -->
       <v-spacer></v-spacer>
         <v-container class="my-auto">
             <div class="nav-links hidden-sm-and-down">
