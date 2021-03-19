@@ -13,7 +13,7 @@ Class ChildPhoto extends Model
     protected $table = 'child_photo';
 
     public function getNameAttribute(){
-        return env('APP_URL') . '/public/storage/' . $this->attributes['name'];
+        return env('APP_URL') . '/storage/' . $this->attributes['name'];
         }
 
 }
