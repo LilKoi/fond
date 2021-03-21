@@ -20,6 +20,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('children', 'Children\СhildrenController');
 Route::resource('children-status','Children\ChildStatusController');
-// Route::group(["admin"],function(){
-    //     Route::get("");
-// });
+Route::resource('city','CityController');
+
+Route::group([
+    'prefix' => 'auth'
+], function () {
+    Route::post('login', 'AuthController@login');
+    Route::post('registration', 'AuthController@registration');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+});

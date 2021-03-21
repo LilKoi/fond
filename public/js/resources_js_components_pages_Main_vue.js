@@ -656,7 +656,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.facts-section-wrapper[data-v-84a9036e] {\r\n  position: relative;\r\n  z-index: 1;\n}\n.facts-section-wrapper[data-v-84a9036e]::before {\r\n  content: \" \";\r\n  position: absolute;\r\n  background: url(\"/doctor.png\");\r\n  opacity: .9;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  z-index: -1;\r\n  background-size: 25%;\r\n  background-position: -8% 20%;\r\n  background-repeat: no-repeat;\r\n  opacity: .9;\n}\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.facts-section-wrapper[data-v-84a9036e] {\n  position: relative;\n  z-index: 1;\n}\n.facts-section-wrapper[data-v-84a9036e]::before {\n  content: \" \";\n  position: absolute;\n  background: url(\"/doctor.png\");\n  opacity: .9;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: -1;\n  background-size: 25%;\n  background-position: -8% 20%;\n  background-repeat: no-repeat;\n  opacity: .9;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
