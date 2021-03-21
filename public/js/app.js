@@ -1942,6 +1942,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2143,7 +2180,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nul {\n    list-style: none;\n}\na {\n    text-decoration: none;\n    color: black;\n}\n.active-link {\n    border-bottom: 2px solid #e91e63;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nul {\n    list-style: none;\n}\na {\n    text-decoration: none;\n    color: black;\n}\n.active-link {\n    border-bottom: 2px solid #e91e63;\n}\n.v-card {\n    border-radius: 2px 0px 0px 2px !important;\n}\n.v-dialog::-webkit-scrollbar {\n    width: 5px;\n    background: #fff;\n}\n.v-dialog::-webkit-scrollbar-thumb {\n    background: #e91e63;\n}\n.v-dialog::-moz-appearance-scrollbar {\n    width: 5px;\n    background: #fff;\n}\n.v-dialog::-moz-appearance-scrollbar-thumb {\n    background: #e91e63;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20360,6 +20397,7 @@ var render = function() {
           _c(
             "v-dialog",
             {
+              staticClass: "dialog",
               scopedSlots: _vm._u([
                 {
                   key: "activator",
@@ -20406,11 +20444,28 @@ var render = function() {
                 "v-card",
                 { attrs: { width: "100%", height: "100%" } },
                 [
-                  _c("v-card-title", [_vm._v("Оставьте заявку")]),
-                  _vm._v(" "),
-                  _c("v-card-subtitle", [
-                    _vm._v("И мы позвоним Вам в ближайшее время")
-                  ]),
+                  _c(
+                    "v-container",
+                    [
+                      _c(
+                        "v-row",
+                        [_c("v-card-title", [_vm._v("Оставьте заявку")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        { staticClass: "mt-n6" },
+                        [
+                          _c("v-card-subtitle", [
+                            _vm._v("И мы позвоним Вам в ближайшее время")
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c(
                     "v-card-text",
@@ -20418,23 +20473,157 @@ var render = function() {
                       _c(
                         "v-form",
                         [
-                          _c("v-text-field", { attrs: { label: "Ваше имя:" } }),
-                          _vm._v(" "),
-                          _c("v-text-field", {
-                            staticClass: "black--text",
-                            attrs: {
-                              required: "",
-                              label: "Ваш номер телефона:"
-                            }
-                          }),
-                          _vm._v(" "),
                           _c(
-                            "v-btn",
-                            {
-                              staticClass: "white--text",
-                              attrs: { color: "pink" }
-                            },
-                            [_vm._v("Позвоните мне!")]
+                            "v-container",
+                            [
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          color: "pink",
+                                          requred: "",
+                                          label: "ФИО ребёнка"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c("v-text-field", {
+                                        staticClass: "black--text",
+                                        attrs: {
+                                          color: "pink",
+                                          required: "",
+                                          label: "ФИО представителя"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c("v-text-field", {
+                                        staticClass: "black--text",
+                                        attrs: {
+                                          color: "pink",
+                                          required: "",
+                                          label: "Номер телефона"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c("v-text-field", {
+                                        staticClass: "black--text",
+                                        attrs: {
+                                          color: "pink",
+                                          required: "",
+                                          label: "Диагноз"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    {
+                                      attrs: {
+                                        cols: "5",
+                                        sm: "4",
+                                        md: "2",
+                                        xl: "2"
+                                      }
+                                    },
+                                    [
+                                      _c("v-text-field", {
+                                        staticClass: "black--text",
+                                        attrs: {
+                                          color: "pink",
+                                          required: "",
+                                          label: "Возраст"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { sm: "8", md: "10" } },
+                                    [
+                                      _c("v-autocomplete", {
+                                        attrs: {
+                                          "hide-no-data": "",
+                                          color: "pink",
+                                          label: "Место проживания"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-checkbox", {
+                                attrs: {
+                                  color: "pink",
+                                  label: "Гражданство РФ"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("v-textarea", {
+                                attrs: { color: "pink", label: "Ваша история" }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                {
+                                  staticClass: "white--text",
+                                  attrs: { color: "pink" }
+                                },
+                                [_vm._v("Позвоните мне!")]
+                              )
+                            ],
+                            1
                           )
                         ],
                         1

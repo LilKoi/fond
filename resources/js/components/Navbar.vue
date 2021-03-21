@@ -32,7 +32,7 @@
             </span>
         </div>
 
-        <v-dialog>  
+        <v-dialog class="dialog">  
             <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" class="white--text" color="pink" @click="showBanner = !showBanner">
                 <v-icon left>phone</v-icon>
@@ -41,13 +41,50 @@
       </template>
 
     <v-card  width="100%" height="100%">
-          <v-card-title>Оставьте заявку</v-card-title>
-          <v-card-subtitle>И мы позвоним Вам в ближайшее время</v-card-subtitle>
+          <v-container>
+              <v-row>
+                      <v-card-title>Оставьте заявку</v-card-title>
+              </v-row>
+              <v-row class="mt-n6">
+                    <v-card-subtitle>И мы позвоним Вам в ближайшее время</v-card-subtitle>
+              </v-row>
+          </v-container>
           <v-card-text>
             <v-form>
-                <v-text-field label="Ваше имя:" />
-                <v-text-field required class="black--text" label="Ваш номер телефона:" />
-                <v-btn class="white--text" color="pink" >Позвоните мне!</v-btn>
+                <v-container>
+                    <v-row>
+                        <v-col>
+                            <v-text-field color="pink" requred label="ФИО ребёнка" />
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col>
+                            <v-text-field color="pink" required class="black--text" label="ФИО представителя" />
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col>
+                            <v-text-field color="pink" required class="black--text" label="Номер телефона" />
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col>
+                            <v-text-field color="pink" required class="black--text" label="Диагноз" />
+                        </v-col>
+                    </v-row>
+                    <v-row >
+                        <v-col cols="5" sm="4" md="2" xl="2">
+                            <v-text-field color="pink" required class="black--text" label="Возраст" />
+                        </v-col>
+                        <v-col sm="8" md="10">
+                            <v-autocomplete hide-no-data color="pink" label="Место проживания" />
+                        </v-col>
+                    </v-row>
+                        
+                        <v-checkbox color="pink" label="Гражданство РФ" />
+                        <v-textarea color="pink" label="Ваша история" />
+                        <v-btn class="white--text" color="pink" >Позвоните мне!</v-btn>
+                </v-container>
             </v-form> 
 
           </v-card-text>
@@ -81,4 +118,24 @@ export default {
     .active-link {
         border-bottom: 2px solid #e91e63;;
     }
+
+    .v-card {
+        border-radius: 2px 0px 0px 2px !important;
+    }
+
+    .v-dialog::-webkit-scrollbar {
+        width: 5px;
+        background: #fff;
+    }
+    .v-dialog::-webkit-scrollbar-thumb {
+        background: #e91e63;
+    }
+    .v-dialog::-moz-appearance-scrollbar {
+        width: 5px;
+        background: #fff;
+    }
+    .v-dialog::-moz-appearance-scrollbar-thumb {
+        background: #e91e63;
+    }
+
 </style>
