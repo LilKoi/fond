@@ -69,5 +69,10 @@ export default {
   opacity: .9;
 }
 
+.tn-atom {
+  border-left: 2px solid #e91e63;
+  padding-left: 10px;
+  min-height: 100%;
+}
 
 </style>

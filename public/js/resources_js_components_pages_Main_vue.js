@@ -656,7 +656,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.facts-section-wrapper[data-v-84a9036e] {\r\n  position: relative;\r\n  z-index: 1;\n}\n.facts-section-wrapper[data-v-84a9036e]::before {\r\n  content: \" \";\r\n  position: absolute;\r\n  background: url(\"/doctor.png\");\r\n  opacity: .9;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  z-index: -1;\r\n  background-size: 25%;\r\n  background-position: -8% 20%;\r\n  background-repeat: no-repeat;\r\n  opacity: .9;\n}\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.facts-section-wrapper[data-v-84a9036e] {\r\n  position: relative;\r\n  z-index: 1;\n}\n.facts-section-wrapper[data-v-84a9036e]::before {\r\n  content: \" \";\r\n  position: absolute;\r\n  background: url(\"/doctor.png\");\r\n  opacity: .9;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  z-index: -1;\r\n  background-size: 25%;\r\n  background-position: -8% 20%;\r\n  background-repeat: no-repeat;\r\n  opacity: .9;\n}\n.tn-atom[data-v-84a9036e] {\r\n  border-left: 2px solid #e91e63;\r\n  padding-left: 10px;\r\n  min-height: 100%;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -680,7 +680,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.main-section-wrapper {\n   position: relative;\n   z-index: 1;\n}\n.main-section-wrapper::before {\n  content: \" \";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 110%;\n  background: url(\"/main_bg.png\");\n  background-repeat: no-repeat;\n  background-size: 40%;\n  background-position: 100% 30%;\n  z-index: -1;\n  opacity: .9;\n}\n.main-container {\n  /* position: relative; */\n}\n.main_bg {\n  /* position: absolute; */\n  /* width: 100%; */\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.main-section-wrapper {\n   position: relative;\n   z-index: 1;\n   padding: 40px 0px 80px 0px;\n}\n.main-section-wrapper::before {\n  content: \" \";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 110%;\n  background: url(\"/main_bg.png\");\n  background-repeat: no-repeat;\n  background-size: 45%;\n  background-position: 100% 30%;\n  z-index: -1;\n  opacity: .9;\n}\n.main-container {\n  /* position: relative; */\n}\n.main_bg {\n  /* position: absolute; */\n  /* width: 100%; */\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3172,7 +3172,7 @@ var render = function() {
     [
       _c(
         "v-container",
-        { staticClass: "my-16 main-container" },
+        { staticClass: "my-8 main-container" },
         [
           _c(
             "v-layout",
@@ -3188,7 +3188,7 @@ var render = function() {
                       staticClass:
                         "text-h4 text-md-h3 text-md-h2 font-weight-regular"
                     },
-                    [_vm._v("\n        Спасаем малышей!\n      ")]
+                    [_vm._v("\n      Спасаем малышей!\n        ")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -3199,14 +3199,14 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n        Поддержите маленьких и беззащитных!\n      "
+                        "\n          Поддержите маленьких и беззащитных!\n        "
                       )
                     ]
                   ),
                   _vm._v(" "),
                   _c("h3", { staticClass: "text-h7 mt-2 font-weight-light" }, [
                     _vm._v(
-                      "\n        Каждый восьмой ребенок рождается раньше срока\nПо статистике, зрение 20% недоношенных детишек поражает ретинопатия\n      "
+                      "\n          Каждый восьмой ребенок рождается раньше срока\n  По статистике, зрение 20% недоношенных детишек поражает ретинопатия\n        "
                     )
                   ]),
                   _vm._v(" "),
