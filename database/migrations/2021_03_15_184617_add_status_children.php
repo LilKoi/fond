@@ -14,7 +14,7 @@ class AddStatusChildren extends Migration
     public function up()
     {
         Schema::table('children', function (Blueprint $table) {
-            $table->integer("status");
+            $table->integer("status")->default(3);
         });
     }
 

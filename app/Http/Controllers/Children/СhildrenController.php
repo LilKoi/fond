@@ -11,14 +11,13 @@ Class СhildrenController extends Controller
     protected $serv;
     public function __construct(ChildrenService $childrenService)
     {
-        // $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except(['index','store']);
         $this->serv = $childrenService;
     }
 
-    public function index():JsonResponse
-    {   
-        // return $this->JsonResource($this->rep->getChildrens());
-        return $this->json($this->serv->getChildren());
+    public function index(Request $request):JsonResponse
+    { 
+        return $this->json($this->serv->getChildren($request->toArray()));
     }
 
     public function create():jsonResponse

@@ -13,12 +13,13 @@ class CityController extends Controller
 
     public function __construct(CityService $cityService)
     {
+        $this->middleware('auth')->except('index');
         $this->serv = $cityService;
     }
 
     public function index():JsonResponse
     {
-        return $this->json($this->serv->getCity(),200);
+        return $this->json($this->serv->getCity());
     }
 
     public function store(Request $request):JsonResponse

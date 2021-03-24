@@ -17,29 +17,20 @@ Class ChildrenRepository
         $this->photo = $childPhoto;
     }
 
-    public function getChildrensStatusHelp():Collection
+    public function getChildrens(int $status):Collection
     {
-        return $this->model->where('status',1)->get();
-    }
-
-    public function getChildrensStatusNotHelp():Collection
-    {
-        return $this->model->where('status',2)->get();
+        return $this->model->where('status',$status)->get();
     }
 
     public function storeChildren($store)
     {
-        $model = new Child();
-        $model->name = $store['name'];
-        $model->description = $store['description'];
-        $model->sum = $store['sum'];
-        $model->status = $store['status'];
+        $model = new Child($store);
         $model->save();
         $this->storePhoto($store['photo'],$model->id);
         return $model;
     }
 
-    public function storePhoto(array $store,int $id)
+    public function storePhoto(array $store,int $id):void
     {
         foreach($store as $key=>$obj)
         {
@@ -47,11 +38,7 @@ Class ChildrenRepository
             $photo->name = $obj->store('uploads','public');
             $photo->child_id = $id;
             $photo->save();
-            if($key == 0){
-                $header = $photo->id;
-            }
         }
-        return $header;
     }
 
     public function findChildren(int $id):Collection
