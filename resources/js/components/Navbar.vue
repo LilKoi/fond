@@ -77,12 +77,21 @@
                             <v-text-field color="pink" required class="black--text" label="Возраст" />
                         </v-col>
                         <v-col sm="8" md="10">
-                            <v-autocomplete hide-no-data color="pink" label="Место проживания" />
-                        </v-col>
+                            <v-autocomplete item-text="city" :items="cities" hide-no-data color="pink" label="Место проживания" />
+
+                            </v-col>
                     </v-row>
+                    
                         
                         <v-checkbox color="pink" label="Гражданство РФ" />
                         <v-textarea color="pink" label="Ваша история" />
+
+                    <v-row>
+                        <v-col cols="5">
+                            <v-file-input small-chips accept="image/*" color="pink" multiple label="Прикрепить фото" counter/>
+                        </v-col>
+                    </v-row>
+
                         <v-btn class="white--text" color="pink" >Позвоните мне!</v-btn>
                 </v-container>
             </v-form> 
@@ -101,8 +110,20 @@
 export default {
     data() {
         return {
-            showBanner: false
+            showBanner: false,
+            cities: null
         }
+    },
+    methods: {
+        async getCities() {
+            const res = await fetch('/api/city');
+            const json = await res.json()
+            this.cities = json
+            window.cities = json
+        }
+    },
+    mounted() {
+        this.getCities()
     }
 }
 </script>
@@ -136,6 +157,12 @@ export default {
     }
     .v-dialog::-moz-appearance-scrollbar-thumb {
         background: #e91e63;
+    }
+
+    .v-autocomplete__content::-webkit-scrollbar {
+        display: none;
+
+    
     }
 
 </style>
