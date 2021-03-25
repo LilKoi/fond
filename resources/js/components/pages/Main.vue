@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <Navbar />
     <main-section />
     <facts-section />
     <!-- <card-section /> -->
@@ -14,6 +15,7 @@
 
 <script>
 // import CardSection from '../CardSection.vue'
+import Navbar from '../Navbar'
 import CollectingSection from '../CollectingSection.vue'
 import FactsSection from '../FactsSection.vue'
 import MainSection from '../MainSection.vue'
@@ -32,7 +34,8 @@ export default {
     ResultsSection,
     AlreadySavedSection,
     ExpansionSection,
-    FooterSection
+    FooterSection,
+    Navbar
   }
 }
 </script>

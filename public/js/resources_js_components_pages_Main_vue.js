@@ -581,14 +581,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _CollectingSection_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../CollectingSection.vue */ "./resources/js/components/CollectingSection.vue");
-/* harmony import */ var _FactsSection_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../FactsSection.vue */ "./resources/js/components/FactsSection.vue");
-/* harmony import */ var _MainSection_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MainSection.vue */ "./resources/js/components/MainSection.vue");
-/* harmony import */ var _ResultsSection_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ResultsSection.vue */ "./resources/js/components/ResultsSection.vue");
-/* harmony import */ var _SupportSection_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SupportSection.vue */ "./resources/js/components/SupportSection.vue");
-/* harmony import */ var _AlreadySavedSection_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../AlreadySavedSection.vue */ "./resources/js/components/AlreadySavedSection.vue");
-/* harmony import */ var _ExpansionSection_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ExpansionSection.vue */ "./resources/js/components/ExpansionSection.vue");
-/* harmony import */ var _FooterSection_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../FooterSection.vue */ "./resources/js/components/FooterSection.vue");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Navbar */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var _CollectingSection_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../CollectingSection.vue */ "./resources/js/components/CollectingSection.vue");
+/* harmony import */ var _FactsSection_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../FactsSection.vue */ "./resources/js/components/FactsSection.vue");
+/* harmony import */ var _MainSection_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MainSection.vue */ "./resources/js/components/MainSection.vue");
+/* harmony import */ var _ResultsSection_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ResultsSection.vue */ "./resources/js/components/ResultsSection.vue");
+/* harmony import */ var _SupportSection_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SupportSection.vue */ "./resources/js/components/SupportSection.vue");
+/* harmony import */ var _AlreadySavedSection_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../AlreadySavedSection.vue */ "./resources/js/components/AlreadySavedSection.vue");
+/* harmony import */ var _ExpansionSection_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ExpansionSection.vue */ "./resources/js/components/ExpansionSection.vue");
+/* harmony import */ var _FooterSection_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../FooterSection.vue */ "./resources/js/components/FooterSection.vue");
+//
 //
 //
 //
@@ -612,17 +614,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    MainSection: _MainSection_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    FactsSection: _FactsSection_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    MainSection: _MainSection_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    FactsSection: _FactsSection_vue__WEBPACK_IMPORTED_MODULE_2__.default,
     // CardSection,
-    SupportSection: _SupportSection_vue__WEBPACK_IMPORTED_MODULE_4__.default,
-    CollectingSection: _CollectingSection_vue__WEBPACK_IMPORTED_MODULE_0__.default,
-    ResultsSection: _ResultsSection_vue__WEBPACK_IMPORTED_MODULE_3__.default,
-    AlreadySavedSection: _AlreadySavedSection_vue__WEBPACK_IMPORTED_MODULE_5__.default,
-    ExpansionSection: _ExpansionSection_vue__WEBPACK_IMPORTED_MODULE_6__.default,
-    FooterSection: _FooterSection_vue__WEBPACK_IMPORTED_MODULE_7__.default
+    SupportSection: _SupportSection_vue__WEBPACK_IMPORTED_MODULE_5__.default,
+    CollectingSection: _CollectingSection_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    ResultsSection: _ResultsSection_vue__WEBPACK_IMPORTED_MODULE_4__.default,
+    AlreadySavedSection: _AlreadySavedSection_vue__WEBPACK_IMPORTED_MODULE_6__.default,
+    ExpansionSection: _ExpansionSection_vue__WEBPACK_IMPORTED_MODULE_7__.default,
+    FooterSection: _FooterSection_vue__WEBPACK_IMPORTED_MODULE_8__.default,
+    Navbar: _Navbar__WEBPACK_IMPORTED_MODULE_0__.default
   }
 });
 
@@ -2663,6 +2667,8 @@ var render = function() {
     "div",
     { staticClass: "main" },
     [
+      _c("Navbar"),
+      _vm._v(" "),
       _c("main-section"),
       _vm._v(" "),
       _c("facts-section"),
