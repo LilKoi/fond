@@ -1865,7 +1865,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'App',
@@ -2007,6 +2006,42 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2025,7 +2060,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return fetch('/api/city');
+                return fetch("/api/city");
 
               case 2:
                 res = _context.sent;
@@ -2170,11 +2205,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
-  path: '/',
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([//   {
+//     path: "/",
+//     component: () => import("../components/pages/Main")
+//   },
+{
+  path: "/",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ "resources_js_components_pages_Main_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/pages/Main */ "./resources/js/components/pages/Main.vue"));
-  }
+    return __webpack_require__.e(/*! import() */ "resources_js_components_pages_Admin_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/pages/Admin */ "./resources/js/components/pages/Admin.vue"));
+  },
+  children: [{
+    path: "children",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_components_Children_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/Children */ "./resources/js/components/Children.vue"));
+    }
+  }, {
+    path: "administration",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_components_Administrators_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/Administrators */ "./resources/js/components/Administrators.vue"));
+    }
+  }, {
+    path: "donuts",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_components_Donuts_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/Donuts */ "./resources/js/components/Donuts.vue"));
+    }
+  }]
 }]);
 
 /***/ }),
@@ -2244,7 +2299,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nul {\n    list-style: none;\n}\na {\n    text-decoration: none;\n    color: black;\n}\n.active-link {\n    border-bottom: 2px solid #e91e63;\n}\n.v-card {\n    border-radius: 2px 0px 0px 2px !important;\n}\n.v-dialog::-webkit-scrollbar {\n    width: 5px;\n    background: #fff;\n}\n.v-dialog::-webkit-scrollbar-thumb {\n    background: #e91e63;\n}\n.v-dialog::-moz-appearance-scrollbar {\n    width: 5px;\n    background: #fff;\n}\n.v-dialog::-moz-appearance-scrollbar-thumb {\n    background: #e91e63;\n}\n.v-autocomplete__content::-webkit-scrollbar {\n    display: none;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nul {\r\n  list-style: none;\n}\na {\r\n  text-decoration: none;\r\n  color: black;\n}\n.active-link {\r\n  border-bottom: 2px solid #e91e63;\n}\n.v-card {\r\n  border-radius: 2px 0px 0px 2px !important;\n}\n.v-dialog::-webkit-scrollbar {\r\n  width: 5px;\r\n  background: #fff;\n}\n.v-dialog::-webkit-scrollbar-thumb {\r\n  background: #e91e63;\n}\n.v-dialog::-moz-appearance-scrollbar {\r\n  width: 5px;\r\n  background: #fff;\n}\n.v-dialog::-moz-appearance-scrollbar-thumb {\r\n  background: #e91e63;\n}\n.v-autocomplete__content::-webkit-scrollbar {\r\n  display: none;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -21065,11 +21120,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-app",
-    [
-      _c("Navbar"),
-      _vm._v(" "),
-      _c("v-main", { staticClass: "grey lighten-5" }, [_c("router-view")], 1)
-    ],
+    [_c("v-main", { staticClass: "grey lighten-5" }, [_c("router-view")], 1)],
     1
   )
 }
@@ -21111,7 +21162,7 @@ var render = function() {
               staticClass:
                 "font-weight-regular text-uppercase text-h6 mx-4 hidden-sm-and-down"
             },
-            [_vm._v("\n            Фонд Провидение\n          ")]
+            [_vm._v("\n      Фонд Провидение\n    ")]
           ),
           _vm._v(" "),
           _c("v-spacer"),
@@ -21152,54 +21203,14 @@ var render = function() {
                       attrs: {
                         exact: "",
                         "active-class": "active-link",
-                        to: "/children"
+                        to: "/admin"
                       }
                     },
                     [
                       _c(
                         "v-btn",
                         { attrs: { small: "", text: "", color: "pink" } },
-                        [_vm._v("Дети")]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "mx-1",
-                      attrs: {
-                        exact: "",
-                        "active-class": "active-link",
-                        to: "/safe"
-                      }
-                    },
-                    [
-                      _c(
-                        "v-btn",
-                        { attrs: { small: "", text: "", color: "pink" } },
-                        [_vm._v("Кому помогли")]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "mx-1",
-                      attrs: {
-                        exact: "",
-                        "active-class": "active-link",
-                        to: "/safepplp"
-                      }
-                    },
-                    [
-                      _c(
-                        "v-btn",
-                        { attrs: { small: "", text: "", color: "pink" } },
-                        [_vm._v("Тому помогли")]
+                        [_vm._v("Админ панель")]
                       )
                     ],
                     1
@@ -21212,7 +21223,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "phone-number mx-5 hidden-sm-and-down" }, [
             _c("span", { staticClass: "font-weight-bold text-no-wrap" }, [
-              _vm._v("\n              8 (927) 120-33-75\n          ")
+              _vm._v("\n        8 (927) 120-33-75\n      ")
             ])
           ]),
           _vm._v(" "),
@@ -81641,7 +81652,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_components_pages_Main_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_pages_Admin_vue":1,"resources_js_components_Children_vue":1,"resources_js_components_Administrators_vue":1,"resources_js_components_Donuts_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
@@ -81768,7 +81779,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if("resources_js_components_pages_Main_vue" == chunkId) {
+/******/ 						if("css/app" != chunkId) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => {
 /******/ 								installedChunkData = installedChunks[chunkId] = [resolve, reject];
