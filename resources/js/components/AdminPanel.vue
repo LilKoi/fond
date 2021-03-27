@@ -10,21 +10,21 @@
         </v-list-item>
         <v-divider />
         <v-list-item-group color="pink">
-          <v-list-item to="/children" link dense class="px-2 py-2">
+          <v-list-item to="/admin/children" link dense class="px-2 py-2">
             <v-list-item-avatar>
               <v-icon large>child_care</v-icon>
             </v-list-item-avatar>
             <v-list-item-content>Дети</v-list-item-content>
           </v-list-item>
           <v-divider />
-          <v-list-item to="/administration" link dense class="px-2 py-2">
+          <v-list-item to="/admin/administration" link dense class="px-2 py-2">
             <v-list-item-avatar>
               <v-icon large>supervisor_account</v-icon>
             </v-list-item-avatar>
             <v-list-item-content>Администраторы</v-list-item-content>
           </v-list-item>
           <v-divider />
-          <v-list-item to="/donuts" link dense class="px-2 py-2">
+          <v-list-item to="/admin/donuts" link dense class="px-2 py-2">
             <v-list-item-avatar>
               <v-icon large>monetization_on</v-icon>
             </v-list-item-avatar>

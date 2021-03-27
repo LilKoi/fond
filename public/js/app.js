@@ -2205,12 +2205,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([//   {
-//     path: "/",
-//     component: () => import("../components/pages/Main")
-//   },
-{
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
   path: "/",
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_components_pages_Main_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/pages/Main */ "./resources/js/components/pages/Main.vue"));
+  }
+}, {
+  path: "/admin",
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_components_pages_Admin_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/pages/Admin */ "./resources/js/components/pages/Admin.vue"));
   },
@@ -81652,7 +81653,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_pages_Admin_vue":1,"resources_js_components_Children_vue":1,"resources_js_components_Administrators_vue":1,"resources_js_components_Donuts_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_pages_Main_vue":1,"resources_js_components_pages_Admin_vue":1,"resources_js_components_Children_vue":1,"resources_js_components_Administrators_vue":1,"resources_js_components_Donuts_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

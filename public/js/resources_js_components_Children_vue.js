@@ -66,46 +66,64 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      children: [{
-        id: 50,
-        name: "Zane Osinski DVM",
-        description: "Quia quisquam nihil harum. Et quisquam atque ut aut nemo molestiae veniam omnis. Totam illum quos at sunt et.",
-        sum: 3918072.3,
-        created_at: "2021-03-16T15:58:02.000000Z",
-        updated_at: "2021-03-16T15:58:02.000000Z",
-        status: 1,
-        photo: [{
-          id: 1,
-          name: "https://s23527.pcdn.co/wp-content/uploads/2019/10/Khanh-Phan-Viet-Nam-entry-Open-competition-Travel-2020-Sony-World-Photography-Awards.jpg.optimal.jpg",
-          child_id: 51,
-          created_at: "2021-03-16T15:59:16.000000Z",
-          updated_at: "2021-03-16T15:59:16.000000Z"
-        }]
-      }, {
-        id: 51,
-        name: "ребёнок первый",
-        description: "lofdssDs",
-        sum: 20000,
-        created_at: "2021-03-16T15:59:16.000000Z",
-        updated_at: "2021-03-16T15:59:16.000000Z",
-        status: 1,
-        photo: [{
-          id: 1,
-          name: "https://s23527.pcdn.co/wp-content/uploads/2019/10/Khanh-Phan-Viet-Nam-entry-Open-competition-Travel-2020-Sony-World-Photography-Awards.jpg.optimal.jpg",
-          child_id: 51,
-          created_at: "2021-03-16T15:59:16.000000Z",
-          updated_at: "2021-03-16T15:59:16.000000Z"
-        }, {
-          id: 2,
-          name: "C:/Users/Казбек/Documents/JS/fond/public/doctor.png",
-          child_id: 51,
-          created_at: "2021-03-16T15:59:16.000000Z",
-          updated_at: "2021-03-16T15:59:16.000000Z"
-        }]
-      }]
+      children: [],
+      dialog: false,
+      cities: null
     };
   },
   methods: {
@@ -120,7 +138,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 console.log("Get children");
                 _context.next = 3;
-                return fetch("http://127.0.0.1:8000/api/children");
+                return fetch("http://127.0.0.1:8000/api/children?status=1,2");
 
               case 3:
                 res = _context.sent;
@@ -130,20 +148,55 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 6:
                 json = _context.sent;
 
-                _this.children.push(json.help);
+                _this.children.push(json["HELP"]);
 
-                _this.children.push(json["don't help"]);
+                _this.children.push(json["DONT_HELP"]);
 
-              case 9:
+                console.log(_this.children);
+                window.children = _this.children;
+
+              case 11:
               case "end":
                 return _context.stop();
             }
           }
         }, _callee);
       }))();
+    },
+    getCities: function getCities() {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var res, json;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return fetch("/api/city");
+
+              case 2:
+                res = _context2.sent;
+                _context2.next = 5;
+                return res.json();
+
+              case 5:
+                json = _context2.sent;
+                _this2.cities = json;
+                window.cities = json;
+
+              case 8:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
     }
   },
-  mounted: function mounted() {// this.getChildren();
+  mounted: function mounted() {
+    this.getChildren();
+    this.getCities();
   }
 });
 
@@ -273,11 +326,7 @@ var render = function() {
                               _c(
                                 "v-list-item-avatar",
                                 { attrs: { size: "70" } },
-                                [
-                                  _c("v-img", {
-                                    attrs: { src: child.photo[0].name }
-                                  })
-                                ],
+                                [_c("v-img", { attrs: { src: null } })],
                                 1
                               ),
                               _vm._v(" "),
@@ -290,15 +339,24 @@ var render = function() {
                                       _c(
                                         "v-list-item-title",
                                         { staticClass: "title" },
-                                        [_vm._v(_vm._s(child.name))]
+                                        [
+                                          _vm._v(
+                                            _vm._s(child[0].name) +
+                                              "\n                    "
+                                          ),
+                                          _c("v-chip", [
+                                            _vm._v(_vm._s(child[0].status))
+                                          ])
+                                        ],
+                                        1
                                       ),
                                       _vm._v(" "),
                                       _c("v-list-item-subtitle", [
-                                        _vm._v(_vm._s(child.sum))
+                                        _vm._v(_vm._s(child[0].sum))
                                       ]),
                                       _vm._v(
                                         "\n                  " +
-                                          _vm._s(child.description) +
+                                          _vm._s(child[0].description) +
                                           "\n                "
                                       )
                                     ],
@@ -353,7 +411,149 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _c("v-form", [_c("v-text-field", [_vm._v("Text")])], 1)
+          _c(
+            "v-dialog",
+            {
+              attrs: { width: "500" },
+              scopedSlots: _vm._u([
+                {
+                  key: "activator",
+                  fn: function(ref) {
+                    var on = ref.on
+                    var attrs = ref.attrs
+                    return [
+                      _c(
+                        "v-layout",
+                        { attrs: { row: "", "justify-end": "" } },
+                        [
+                          _c(
+                            "v-btn",
+                            _vm._g(
+                              _vm._b(
+                                {
+                                  staticClass: "white--text mx-4 mt-4",
+                                  attrs: {
+                                    color: "pink",
+                                    dark: "",
+                                    elevation: "0"
+                                  }
+                                },
+                                "v-btn",
+                                attrs,
+                                false
+                              ),
+                              on
+                            ),
+                            [
+                              _vm._v(
+                                "\n            Добавить ребенка\n          "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.dialog,
+                callback: function($$v) {
+                  _vm.dialog = $$v
+                },
+                expression: "dialog"
+              }
+            },
+            [
+              _vm._v(" "),
+              _c(
+                "v-card",
+                [
+                  _c(
+                    "v-card-title",
+                    { staticClass: "headline grey lighten-2" },
+                    [_vm._v("\n          Добавить ребенка\n        ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-form",
+                        [
+                          _c("v-text-field", {
+                            attrs: { label: "ФИО ребенка" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: { label: "ФИО родителя" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-select", {
+                            attrs: {
+                              label: "Статус ребенка",
+                              items: [
+                                "Нужна помощь",
+                                "Помощь оказана",
+                                "В ожидании"
+                              ]
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-autocomplete", {
+                            attrs: {
+                              "item-text": "city",
+                              items: _vm.cities,
+                              "hide-no-data": "",
+                              color: "pink",
+                              label: "Место проживания"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: {
+                              label: "Необходимая сумма",
+                              type: "number"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: { label: "Собранная сумма", type: "number" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-textarea", { attrs: { label: "Описание" } })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "white--text",
+                          attrs: { color: "pink" }
+                        },
+                        [_vm._v("\n            Добавить\n          ")]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )

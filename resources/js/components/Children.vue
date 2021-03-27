@@ -12,15 +12,18 @@
             <v-flex xs10 md8>
               <v-list-item>
                 <v-list-item-avatar size="70"
-                  ><v-img :src="child.photo[0].name"
+                  ><v-img :src="null"
                 /></v-list-item-avatar>
                 <v-list-item-group>
                   <v-list-item-content>
-                    <v-list-item-title class="title">{{
-                      child.name
-                    }}</v-list-item-title>
-                    <v-list-item-subtitle>{{ child.sum }}</v-list-item-subtitle>
-                    {{ child.description }}
+                    <v-list-item-title class="title"
+                      >{{ child[0].name }}
+                      <v-chip>{{ child[0].status }}</v-chip>
+                    </v-list-item-title>
+                    <v-list-item-subtitle>{{
+                      child[0].sum
+                    }}</v-list-item-subtitle>
+                    {{ child[0].description }}
                   </v-list-item-content>
                 </v-list-item-group>
                 <v-spacer />
@@ -37,10 +40,59 @@
           </v-layout>
         </div>
       </v-list>
+      <v-dialog v-model="dialog" width="500">
+        <template v-slot:activator="{ on, attrs }">
+          <v-layout row justify-end>
+            <v-btn
+              color="pink"
+              class="white--text mx-4 mt-4"
+              dark
+              elevation="0"
+              v-bind="attrs"
+              v-on="on"
+            >
+              Добавить ребенка
+            </v-btn>
+          </v-layout>
+        </template>
 
-      <v-form>
-        <v-text-field>Text</v-text-field>
-      </v-form>
+        <v-card>
+          <v-card-title class="headline grey lighten-2">
+            Добавить ребенка
+          </v-card-title>
+
+          <v-card-text>
+            <v-form>
+              <v-text-field label="ФИО ребенка" />
+              <v-text-field label="ФИО родителя" />
+              <v-select
+                label="Статус ребенка"
+                :items="['Нужна помощь', 'Помощь оказана', 'В ожидании']"
+              />
+              <v-autocomplete
+                item-text="city"
+                :items="cities"
+                hide-no-data
+                color="pink"
+                label="Место проживания"
+              />
+              <v-text-field label="Необходимая сумма" type="number" />
+              <v-text-field label="Собранная сумма" type="number" />
+
+              <v-textarea label="Описание" />
+            </v-form>
+          </v-card-text>
+
+          <v-divider />
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="pink" class="white--text">
+              Добавить
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-card>
   </v-container>
 </template>
@@ -49,67 +101,31 @@
 export default {
   data() {
     return {
-      children: [
-        {
-          id: 50,
-          name: "Zane Osinski DVM",
-          description:
-            "Quia quisquam nihil harum. Et quisquam atque ut aut nemo molestiae veniam omnis. Totam illum quos at sunt et.",
-          sum: 3918072.3,
-          created_at: "2021-03-16T15:58:02.000000Z",
-          updated_at: "2021-03-16T15:58:02.000000Z",
-          status: 1,
-          photo: [
-            {
-              id: 1,
-              name:
-                "https://s23527.pcdn.co/wp-content/uploads/2019/10/Khanh-Phan-Viet-Nam-entry-Open-competition-Travel-2020-Sony-World-Photography-Awards.jpg.optimal.jpg",
-              child_id: 51,
-              created_at: "2021-03-16T15:59:16.000000Z",
-              updated_at: "2021-03-16T15:59:16.000000Z"
-            }
-          ]
-        },
-        {
-          id: 51,
-          name: "ребёнок первый",
-          description: "lofdssDs",
-          sum: 20000,
-          created_at: "2021-03-16T15:59:16.000000Z",
-          updated_at: "2021-03-16T15:59:16.000000Z",
-          status: 1,
-          photo: [
-            {
-              id: 1,
-              name:
-                "https://s23527.pcdn.co/wp-content/uploads/2019/10/Khanh-Phan-Viet-Nam-entry-Open-competition-Travel-2020-Sony-World-Photography-Awards.jpg.optimal.jpg",
-              child_id: 51,
-              created_at: "2021-03-16T15:59:16.000000Z",
-              updated_at: "2021-03-16T15:59:16.000000Z"
-            },
-            {
-              id: 2,
-              name: "C:/Users/Казбек/Documents/JS/fond/public/doctor.png",
-              child_id: 51,
-              created_at: "2021-03-16T15:59:16.000000Z",
-              updated_at: "2021-03-16T15:59:16.000000Z"
-            }
-          ]
-        }
-      ]
+      children: [],
+      dialog: false,
+      cities: null
     };
   },
   methods: {
     async getChildren() {
       console.log("Get children");
-      let res = await fetch("http://127.0.0.1:8000/api/children");
+      let res = await fetch("http://127.0.0.1:8000/api/children?status=1,2");
       let json = await res.json();
-      this.children.push(json.help);
-      this.children.push(json["don't help"]);
+      this.children.push(json["HELP"]);
+      this.children.push(json["DONT_HELP"]);
+      console.log(this.children);
+      window.children = this.children;
+    },
+    async getCities() {
+      const res = await fetch("/api/city");
+      const json = await res.json();
+      this.cities = json;
+      window.cities = json;
     }
   },
   mounted() {
-    // this.getChildren();
+    this.getChildren();
+    this.getCities();
   }
 };
 </script>
