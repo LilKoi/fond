@@ -13,7 +13,7 @@ class CityController extends Controller
 
     public function __construct(CityService $cityService)
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except('store');
         $this->serv = $cityService;
     }
 
