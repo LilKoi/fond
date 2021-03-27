@@ -4,6 +4,7 @@ namespace App\Http\Repository\Children;
 use App\Models\Child;
 use Illuminate\Support\Collection;
 use App\Models\ChildPhoto;
+use Illuminate\Database\Eloquent\Builder;
 
 Class ChildrenRepository
 {
@@ -19,7 +20,7 @@ Class ChildrenRepository
 
     public function getChildrens(int $status):Collection
     {
-        return $this->model->where('status',$status)->get();
+        return $this->model->withSum('payment', 'price')->where('status', $status)->get();
     }
 
     public function storeChildren($store)

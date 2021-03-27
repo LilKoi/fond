@@ -31,3 +31,11 @@ Route::group([
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
 });
+
+Route::group([
+    'prefix' => 'payment'
+],function(){
+    Route::get('/','PaymentController@index');
+    Route::post('start','PaymentController@start');
+    Route::post('responce','PaymentController@responce');
+});
