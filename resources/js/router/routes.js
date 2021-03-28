@@ -1,10 +1,10 @@
 export default [
-  //   {
-  //     path: "/",
-  //     component: () => import("../components/pages/Main")
-  //   },
   {
     path: "/",
+    component: () => import("../components/pages/Main")
+  },
+  {
+    path: "/admin",
     component: () => import("../components/pages/Admin"),
     children: [
       {

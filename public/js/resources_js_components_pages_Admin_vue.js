@@ -351,7 +351,7 @@ var render = function() {
                     "v-list-item",
                     {
                       staticClass: "px-2 py-2",
-                      attrs: { to: "/children", link: "", dense: "" }
+                      attrs: { to: "/admin/children", link: "", dense: "" }
                     },
                     [
                       _c(
@@ -375,7 +375,11 @@ var render = function() {
                     "v-list-item",
                     {
                       staticClass: "px-2 py-2",
-                      attrs: { to: "/administration", link: "", dense: "" }
+                      attrs: {
+                        to: "/admin/administration",
+                        link: "",
+                        dense: ""
+                      }
                     },
                     [
                       _c(
@@ -399,7 +403,7 @@ var render = function() {
                     "v-list-item",
                     {
                       staticClass: "px-2 py-2",
-                      attrs: { to: "/donuts", link: "", dense: "" }
+                      attrs: { to: "/admin/donuts", link: "", dense: "" }
                     },
                     [
                       _c(
