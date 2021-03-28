@@ -17,4 +17,3 @@ Route::fallback(function () {
     return view('welcome');
 });
 
-Route::get('/{any?}', fn () => view('welcome'));
