@@ -17,7 +17,7 @@ Class СhildrenController extends Controller
 
     public function index(Request $request):JsonResponse
     { 
-        return $this->json($this->serv->getChildren($request->toArray()));
+        return $this->json($this->serv->getChildren($request));
     }
 
     public function create():jsonResponse

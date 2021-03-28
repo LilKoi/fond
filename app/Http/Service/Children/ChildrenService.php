@@ -16,25 +16,19 @@ Class ChildrenService
         $this->rep = $childrenRepository;
     }
 
-    public function getChildren(array $data):array
+    public function getChildren($data):array
     {
-        $status = explode(',', $data['status']);
+        // dd($data['status']);
+        $status = explode(',', $data->status);
+
+        $result = [];
+        // return($status);
         foreach($status as $key =>$value)
         {
-            switch($value){
-                case 1:
-                    $arr['HELP'] = $this->rep->getChildrens($value);
-                    break;
-                case 2:
-                    $arr["DONT_HELP"] = $this->rep->getChildrens($value);
-                    break;
-                case 3:
-                    $arr['EXPECTED'] =$this->rep->getChildrens($value);
-                    break;
-            }
+            $result[Child::STATUSES[$value]] = $this->rep->getChildrens($value);
         }
 
-        return $arr; 
+        return $result; 
     }
 
     public function createChildren()
