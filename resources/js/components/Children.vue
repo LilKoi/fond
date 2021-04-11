@@ -20,9 +20,16 @@
                       >{{ child[0].name }}
                       <v-chip>{{ child[0].status }}</v-chip>
                     </v-list-item-title>
-                    <v-list-item-subtitle>{{
-                      child[0].sum
-                    }}</v-list-item-subtitle>
+                    <v-list-item-subtitle
+                      >{{
+                        child[0].payment_sum_price
+                          ? child[0].payment_sum_price
+                          : 0
+                      }}/{{ child[0].sum }}
+                      <v-icon color="green"
+                        >monetization_on</v-icon
+                      ></v-list-item-subtitle
+                    >
                     {{ child[0].description }}
                   </v-list-item-content>
                 </v-list-item-group>
@@ -30,10 +37,8 @@
               </v-list-item>
             </v-flex>
             <v-flex xs12 md4 class="d-flex justify-center">
-              <v-btn color="yellow" rounded class="white--text mx-2"
-                >Изменить</v-btn
-              >
-              <v-btn color="red" rounded class="white--text mx-2"
+              <v-btn color="gray" rounded elevation="2">Изменить</v-btn>
+              <v-btn color="red" rounded class="white--text mx-2" elevation="2"
                 >Закрыть</v-btn
               >
             </v-flex>

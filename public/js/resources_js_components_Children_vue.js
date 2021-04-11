@@ -118,6 +118,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -351,9 +356,27 @@ var render = function() {
                                         1
                                       ),
                                       _vm._v(" "),
-                                      _c("v-list-item-subtitle", [
-                                        _vm._v(_vm._s(child[0].sum))
-                                      ]),
+                                      _c(
+                                        "v-list-item-subtitle",
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              child[0].payment_sum_price
+                                                ? child[0].payment_sum_price
+                                                : 0
+                                            ) +
+                                              "/" +
+                                              _vm._s(child[0].sum) +
+                                              "\n                    "
+                                          ),
+                                          _c(
+                                            "v-icon",
+                                            { attrs: { color: "green" } },
+                                            [_vm._v("monetization_on")]
+                                          )
+                                        ],
+                                        1
+                                      ),
                                       _vm._v(
                                         "\n                  " +
                                           _vm._s(child[0].description) +
@@ -384,8 +407,11 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
-                              staticClass: "white--text mx-2",
-                              attrs: { color: "yellow", rounded: "" }
+                              attrs: {
+                                color: "gray",
+                                rounded: "",
+                                elevation: "2"
+                              }
                             },
                             [_vm._v("Изменить")]
                           ),
@@ -394,7 +420,11 @@ var render = function() {
                             "v-btn",
                             {
                               staticClass: "white--text mx-2",
-                              attrs: { color: "red", rounded: "" }
+                              attrs: {
+                                color: "red",
+                                rounded: "",
+                                elevation: "2"
+                              }
                             },
                             [_vm._v("Закрыть")]
                           )
